@@ -26,6 +26,7 @@ void loop() {
   }
   else{
     myServo.write(STOPSPEED);
-  }
+  }//dont mind me
+  
   
 }
