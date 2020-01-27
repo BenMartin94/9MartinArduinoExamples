@@ -4,6 +4,7 @@ int voltageInputVal;
 
 void setup() {
   // put your setup code here, to run once:
+  analogInputPin = A0;
   Serial.begin(9600); //This is for communication with the computer
 }
 
