@@ -7,7 +7,7 @@ int voltageInputVal;
 
 int motorPin;
 
-bool gateOpen;
+bool gateOpen; //true or false=(!true)
 
 void setup() {
   // put your setup code here, to run once:
