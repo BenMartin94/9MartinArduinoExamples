@@ -1,3 +1,7 @@
+#include "Servo.h"
+Servo servo;
+
+
 int pin1 = 2;
 int pin2 = 3;
 int pin3 = 4;
@@ -8,7 +12,7 @@ int pin7 = 8;
 int pin8 = 9;
 void setup() {
   // put your setup code here, to run once:
-  
+  servo.attach(10);
   Serial.begin(9600);
 }
 
@@ -16,6 +20,23 @@ void loop() {
   // put your main code here, to run repeatedly:
   int col = pollCol();
   int row = pollRow();
+  if (col==1&&row==1){
+    servo.write(20);
+    delay(1000);
+  }
+  else if (col==2&&row==1){
+    servo.write(10);
+    delay(500);
+  }
+  else if (col==3&&row==1){
+    servo.write(5);
+    delay(100);
+  }
+  
+  
+  else{
+    servo.write(90);
+  }
   String toPrint = String(row) + " " + String(col);
   Serial.println(toPrint);
 }
